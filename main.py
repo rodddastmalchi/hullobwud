@@ -46,6 +46,11 @@ def two_years():
     return render_template('two_years.html', showModal=show_modal, img=img, text=text)
 
 
+@app.route("/3years", methods=['GET', 'POST'])
+def three_years():
+    return render_template('three_years.html')
+
+
 @app.route("/", methods=['GET', 'POST'])
 def main():
     if request.method == 'POST':
@@ -53,6 +58,8 @@ def main():
             return redirect("/6months", code=302)
         elif request.form["type"] == '2 years':
             return redirect("/2years", code=302)
+        elif request.form["type"] == '3 years':
+            return redirect("/3years", code=302)
     return render_template('main.html')
 
 
