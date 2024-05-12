@@ -1,7 +1,9 @@
 import os
-import constants
-from flask import Flask, redirect, render_template, request, send_from_directory
 from random import randint
+
+from flask import Flask, redirect, render_template, request, send_from_directory
+
+import constants
 
 app = Flask(__name__)
 
@@ -23,21 +25,11 @@ def favicon():
 
 @app.route("/6months", methods=['GET', 'POST'])
 def six_months():
-    return render_template('six.html')
-
-
-@app.route("/", methods=['GET', 'POST'])
-def main():
-    if request.method == 'POST':
-        if request.form["type"] == '6 months':
-            return redirect("/6months", code=302)
-        elif request.form["type"] == '2 years':
-            return redirect("/2years", code=302)
-    return render_template('main.html')
+    return render_template('six_months.html')
 
 
 @app.route("/2years", methods=['GET', 'POST'])
-def start():
+def two_years():
     show_modal = False
     img = None
     text = None
@@ -51,7 +43,17 @@ def start():
             text = emotion_to_image_map[emotion][index].text
             show_modal = True
 
-    return render_template('index.html', showModal=show_modal, img=img, text=text)
+    return render_template('two_years.html', showModal=show_modal, img=img, text=text)
+
+
+@app.route("/", methods=['GET', 'POST'])
+def main():
+    if request.method == 'POST':
+        if request.form["type"] == '6 months':
+            return redirect("/6months", code=302)
+        elif request.form["type"] == '2 years':
+            return redirect("/2years", code=302)
+    return render_template('main.html')
 
 
 @app.errorhandler(500)
