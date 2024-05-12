@@ -1,0 +1,43 @@
+.errorMessage {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2em;
+
+  }
+
+.container {
+    font-family: 'Fredoka', sans-serif;
+    max-width: 90%;
+    padding-top: 0px;
+}
+
+.home {
+    color: pink;
+    border: 3px solid pink;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 0.2s;
+}
+
+.home:hover {
+    border: 3px solid deeppink;
+    color: deeppink;
+    transition: 0.2s;
+  }
+  
+.headers {
+    display: inline;
+}
+
+h1, a {
+    display: inline;
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+}

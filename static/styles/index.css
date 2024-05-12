@@ -1,0 +1,119 @@
+.searchForm {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.5em;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.inputForm {
+  top: 20%;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1em;
+  width: 3.5em;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
+.searchButton {
+  font-size: 1.5em;
+  transition: 0.2s;
+  color: #fa7578;
+  text-align: center;
+  display: inline;
+  transition: 0.2s;
+  background-color: transparent;
+  font-family: "Fredoka", sans-serif;
+  border: 3px solid #fa7578;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+  border-color: black;
+}
+.searchButton {
+  padding: 20px;
+  transition: 0.2s;
+  color: #fa7578;
+  text-decoration: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: block;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #ffff;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 5px solid #fa7578;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-height: 30%;
+  max-width: 30%;
+  height: auto;
+  width: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: "Fredoka", sans-serif;
+  font-size: 5vh;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  font-family: "Fredoka", sans-serif;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.break {
+  width: 100%;
+}
